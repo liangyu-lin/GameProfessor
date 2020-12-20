@@ -1,0 +1,144 @@
+*{
+	box-sizing: border-box;
+	font-family: 'Roboto', sans-serif;
+}
+body{
+	margin: 0;
+	padding: 0;
+	/*background-color: #5200cc;
+	color: white;*/
+	/* For browsers that do not support gradients */
+	background-image: linear-gradient(-45deg, #7b2cbf, #9d4edd, #23A6D5, #23D5AB);
+	background-size: 400% 1200%;
+	position: relative;
+	animation: change 10s ease-in-out infinite;
+}
+
+h1{
+	text-align: center;
+	margin: 2em;
+	color: white;
+}
+h2{
+	text-align: center;
+	color: white;
+}
+
+nav{
+	width: 100%;
+	height: 4em;
+	background-color: black;
+	display: flex;
+	justify-content: space-between;
+}
+nav div{
+
+	margin: auto 1em;
+}
+nav a{
+	color: white;
+	text-decoration: none;
+}
+nav a:hover{
+	border-bottom: 1px solid white;
+	transition: 0.3s;
+	/*transform: scale(1.1);*/
+	cursor: pointer;
+}
+.main{
+	display: flex;
+	max-width: 1200px;
+		width: 80%;
+	margin: 4em auto;
+	/*border: 1px solid blue;*/
+}
+.left-login{
+	flex-basis: 50%;
+	border-right: 0.5px solid white;
+}
+label{
+	font-size: 0.8em;
+	color: white;
+
+}
+form{
+	width: 80%;
+	margin: 2em auto;
+	/*border: 1px solid red;*/
+
+}
+input{
+	/*border: 1px solid green;*/
+	width: 100%;
+	height: 30px;
+	background-color: #E8F0FE;
+	border: none;
+	border-radius: 5px;
+	margin-bottom: 1em;
+	margin-top: 5px;
+	padding-left:8px;
+}
+
+input:focus{
+	outline:none;
+}
+.reset{
+	text-align: center;
+}
+.reset a{
+	font-size: 0.8em;
+	text-decoration: none;
+	color: black;
+}
+.reset a:hover{
+	border-bottom: 1px solid black;
+}
+.right-signup{
+	flex-basis: 50%;
+	border-left: 0.5px solid lightgray;
+}
+.button{
+	width: 80%;
+	margin: 2em auto;
+	text-align: center;
+}
+.button input{
+
+	width: 80%;
+	cursor: pointer;
+	background-color: #091221;
+	color: white;
+	letter-spacing: 2px;
+	border: none;
+}
+.button input:hover{
+	background-color: #00AEFF;
+	color: white;
+}
+
+h4{
+	color:gray;
+	text-align: center;
+	font-size: 0.8em;
+}
+
+p{
+	color: red; 
+	text-align: center;
+	font-size: 0.8em;
+}
+
+/*background animation from https://www.youtube.com/watch?v=fBRzD6dwJfw*/
+@keyframes change {
+	0% {
+		background-position: 0 50%;
+	}
+
+	50% {
+		background-position: 100% 50%;
+	}
+
+	100% {
+		background-position: 0 50%;
+	}
+}

@@ -1,0 +1,350 @@
+
+/* set all fonts to roboto */
+* {
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #313D53;
+  /* For browsers that do not support gradients */
+  background-image: linear-gradient(-45deg, #7b2cbf, #9d4edd, #23A6D5, #23D5AB);
+  background-size: 400% 1200%;
+  position: relative;
+  animation: change 10s ease-in-out infinite;
+}
+
+h1 {
+  font-size: 3rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border: 3px solid #fff;
+  padding: 2rem 4rem;
+  color: white;
+  margin-top: 100px;
+
+}
+
+h3 {
+  font-size: 22px;
+  text-transform: uppercase;
+  color: #F5F5F5;
+  margin: 30px;
+  content: '\a';
+    white-space: pre;
+}
+
+
+
+
+
+/*side menu*/
+.sidemenu {
+  background: #090909;
+  height: 120vh;
+  position: sticky;
+  top: 0;
+  padding-top: 50px;
+  margin-top: 50px;
+
+}
+
+.active {
+  background-color: #373535;
+  color: #B8B8B8;
+  border-left: 3px solid #0C93D2;
+}
+
+.sidemenu ul {
+  margin: 0;
+  padding: 50px 0;
+}
+
+.sidemenu ul li {
+  list-style: none;
+}
+
+
+/*Buttons*/
+
+.sidemenu ul li button {
+  padding: 16px 20px 30px 20px;
+  font-size: 18px;
+  color: #949494;
+  display: block;
+  text-decoration: none;
+  height: 50px;
+  max-width: 285px;
+  width: 100%;
+  letter-spacing: 0.2em;
+  border-radius: 2px;
+  text-transform: uppercase;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.25) 1px 2px 2px;
+  background-color:#373535;
+  cursor: pointer;
+  outline: none;
+
+  margin-bottom: 5%;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  text-align: left;
+}
+
+.sidemenu ul li button:hover {
+  background-color: #373535;
+  color: #B8B8B8;
+}
+
+.sidemenu ul li button:focus {
+  background-color: #373535;
+  color: #B8B8B8;
+  border-left: 3px solid #0C93D2;
+}
+
+/*Search Bar*/
+.srch
+{
+  position: absolute;
+  background-color:#e5e5e5;
+  height: 50px;
+  border-radius: 40px;
+  padding: 5px;
+  margin-left: 5px;
+
+
+}
+.srch:hover > #searchText
+{
+  width: 220px;
+  padding: 0 12px;
+}
+.srch:hover > #search-btn
+{
+  background: #e5e5e5;
+}
+.search-btn
+{
+  color: #21AFF1;
+  float: right;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #091424;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+#searchText
+{
+  border: none;
+  background: none;
+  outline: none;
+  float: left;
+  padding: 0;
+  color: #091424;
+  font-size: 16px;
+  transition: 0.4s;
+  line-height: 40px;
+  width: 0px;
+
+}
+
+.pages{
+  color: white;
+  text-decoration: none;
+  font-size: 1.2em;
+  padding: 10px;
+}
+
+.pages:hover{
+  color: #21AFF1;
+
+}
+
+.currentPage{
+  border-bottom: 1px solid white;
+}
+
+
+ /* #gameGenre{
+  padding-bottom: 440px;
+}  */
+
+
+
+/*game cards css*/
+.gameCards{
+  letter-spacing: 0.1em;
+  line-height: 1.3;
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  float: left;
+  width: 25%;
+  margin-bottom: 25px;
+  padding: 15px;
+
+}
+
+.gameCards .card {
+  width: 280px;
+  height: 360px;
+  border-radius: 3px;
+  box-shadow:  0 2px 2px rgba(0, 0, 0, 0.9);
+  text-align: center;
+  transition: all 0.25s;
+  background-color: #091424;
+}
+
+.gameCards .card:hover {
+  transform: translateY(-15px);
+  box-shadow: 0 12px 16px rgba(0, 0, 0, 0.3);
+}
+
+
+.gameCards .card img {
+  width: 280px;
+  height: 280px;
+  border-radius: 3px;
+}
+
+.gameCards .card h4{
+  font-weight: 600;
+  margin: 5px;
+}
+
+.gameCards .card p{
+  padding: 0 1rem;
+  font-size: 16px;
+  font-weight: 300;
+  color: #A3A3A3;
+}
+
+.card input {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: #088BC8;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+  border-radius: 3px;
+}
+
+
+.card input:hover{
+  background-color: #21AFF1;
+}
+
+
+@media screen and (max-width: 1700px) {
+  .gameCards{
+    width:25%;
+  }
+
+  .sidemenu{
+    height: 260vh;
+  }
+}
+
+@media screen and (max-width: 1550px) {
+  .sidemenu{
+    height: 250vh;
+  }
+
+
+  .gameCards .card {
+    width: 230px;
+    height: 310px;
+  }
+
+  .gameCards .card img {
+    width: 230px;
+    height: 230px;
+  }
+
+}
+
+@media screen and (max-width: 1200px) {
+  .gameCards{
+    width:50%;
+  }
+
+
+  .gameCards .card {
+    width: 300px;
+    height: 380px;
+  }
+
+  .gameCards .card img {
+    width: 300px;
+    height: 300px;
+  }
+
+}
+.sidemenu{
+  height: 600vh;
+}
+
+
+@media screen and (max-width: 850px) {
+  .gameCards{
+    width:100%;
+  }
+  .sidemenu{
+    height: 460vh;
+  }
+}
+@media screen and (max-width: 450px) {
+
+  .sidemenu{
+    height: 480vh;
+  }
+
+  .gameCards .card p{
+    font-size: 12px;
+  }
+
+  .gameCards .card h4{
+    font-size: 16px;
+  }
+
+  .card input {
+    font-size: 16px;
+  }
+
+
+  .gameCards .card {
+    width: 270px;
+    height: 360px;
+  }
+  .gameCards .card img {
+    margin-top: 15px;
+    width: 270px;
+    height: 270px;
+  }
+
+}
+/*Search Box*/
+
+/*background animation from https://www.youtube.com/watch?v=fBRzD6dwJfw*/
+@keyframes change {
+  0% {
+    background-position: 0 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0 50%;
+  }
+}
